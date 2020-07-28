@@ -4,6 +4,7 @@ class CreateClothes < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :category
       t.string :size
+      t.string :image
 
       t.timestamps
     end

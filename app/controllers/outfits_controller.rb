@@ -7,7 +7,10 @@ class OutfitsController < ApplicationController
     
     def show
         outfit = Outfit.find(params[:id])
-        render json: outfits, except: [:updated_at, :created_at]
+        options = {
+        include: :clothes
+        }
+        render json: OutfitSerializer.new(outfit, options)
     end
 
 end
