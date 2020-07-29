@@ -5842,3 +5842,1430 @@ Completed 200 OK in 142ms (Views: 31.6ms | ActiveRecord: 103.4ms | Allocations: 
 Completed 200 OK in 225ms (Views: 129.1ms | ActiveRecord: 81.6ms | Allocations: 31431)
 
 
+Started GET "/outfits" for ::1 at 2020-07-29 15:37:00 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 15:37:00 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mClothe Load (2.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  [1m[36mOutfit Load (1.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.27ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 2.3ms | Allocations: 5111)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.4ms)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 6.0ms | Allocations: 10597)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 15:37:58 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 15:37:58 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (438.2ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (454.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (7.48ms)
+Completed 200 OK in 466ms (Views: 11.5ms | ActiveRecord: 454.0ms | Allocations: 4493)
+
+
+[active_model_serializers]   [1m[36mClothe Load (27.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (494.18ms)
+Completed 200 OK in 936ms (Views: 467.3ms | ActiveRecord: 468.1ms | Allocations: 10923)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 15:39:34 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 15:39:34 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  [1m[36mOutfit Load (4.2ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.47ms)
+[active_model_serializers]   [1m[36mClothe Load (4.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 1.2ms | Allocations: 4648)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (224.07ms)
+Completed 200 OK in 1017ms (Views: 1005.5ms | ActiveRecord: 11.1ms | Allocations: 10434)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 15:43:07 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 15:43:07 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (1.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  [1m[36mClothe Load (16.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.63ms)
+Completed 200 OK in 505ms (Views: 488.0ms | ActiveRecord: 16.4ms | Allocations: 8578)
+
+
+[active_model_serializers]   [1m[36mClothe Load (11.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (511.54ms)
+Completed 200 OK in 516ms (Views: 501.3ms | ActiveRecord: 14.4ms | Allocations: 10561)
+
+
+Started GET "/clothes" for ::1 at 2020-07-29 16:09:48 -0400
+Started GET "/outfits" for ::1 at 2020-07-29 16:09:48 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (1.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+  [1m[36mOutfit Load (12.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.7ms)
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 1.6ms | Allocations: 3539)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (714.05ms)
+Completed 200 OK in 774ms (Views: 749.1ms | ActiveRecord: 20.8ms | Allocations: 10917)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:10:07 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:10:07 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (1.1ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (3.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.93ms)
+Completed 200 OK in 1511ms (Views: 1507.6ms | ActiveRecord: 3.0ms | Allocations: 5778)
+
+
+[active_model_serializers]   [1m[36mClothe Load (161.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (5.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1962.12ms)
+Completed 200 OK in 1967ms (Views: 1796.2ms | ActiveRecord: 169.8ms | Allocations: 10899)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:10:55 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:10:55 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (9.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (49.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (68.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (19.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.19ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 814ms (Views: 745.8ms | ActiveRecord: 68.2ms | Allocations: 6724)
+
+
+[active_model_serializers]   [1m[36mClothe Load (137.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (23.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (995.04ms)
+Completed 200 OK in 1008ms (Views: 767.9ms | ActiveRecord: 239.7ms | Allocations: 10558)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:11:03 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:11:03 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (1.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  [1m[36mOutfit Load (2.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.04ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 1.0ms | Allocations: 4487)
+
+
+[active_model_serializers]   [1m[36mClothe Load (26.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (85.98ms)
+Completed 200 OK in 92ms (Views: 60.7ms | ActiveRecord: 31.2ms | Allocations: 10893)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:13:05 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:13:05 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (2.2ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (2.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.34ms)
+Completed 200 OK in 300ms (Views: 296.7ms | ActiveRecord: 2.7ms | Allocations: 5789)
+
+
+[active_model_serializers]   [1m[36mClothe Load (17.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (4.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (372.84ms)
+Completed 200 OK in 379ms (Views: 351.6ms | ActiveRecord: 26.1ms | Allocations: 10746)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:17:12 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:17:12 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (163.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (188.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (131.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.49ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 567ms (Views: 373.7ms | ActiveRecord: 188.1ms | Allocations: 5890)
+
+
+[active_model_serializers]   [1m[36mClothe Load (60.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (720.55ms)
+Completed 200 OK in 893ms (Views: 534.5ms | ActiveRecord: 357.6ms | Allocations: 10437)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:18:44 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:18:44 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (0.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (9.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.11ms)
+Completed 200 OK in 16ms (Views: 5.8ms | ActiveRecord: 9.7ms | Allocations: 4487)
+
+
+[active_model_serializers]   [1m[36mClothe Load (14.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (912.35ms)
+Completed 200 OK in 917ms (Views: 900.0ms | ActiveRecord: 16.4ms | Allocations: 10569)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:19:08 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:19:08 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (2.0ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (2.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (3.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (10.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.87ms)
+Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 3.4ms | Allocations: 5552)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.39ms)
+Completed 200 OK in 114ms (Views: 97.2ms | ActiveRecord: 16.3ms | Allocations: 10893)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:19:54 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:19:54 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (3.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (31.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (100.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (78.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.51ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 430ms (Views: 328.8ms | ActiveRecord: 100.7ms | Allocations: 5002)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (447.91ms)
+Completed 200 OK in 456ms (Views: 340.5ms | ActiveRecord: 115.3ms | Allocations: 10907)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:19:55 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:19:55 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (12.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (2.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (4.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.24ms)
+Completed 200 OK in 70ms (Views: 65.3ms | ActiveRecord: 4.1ms | Allocations: 4096)
+
+
+[active_model_serializers]   [1m[36mClothe Load (4.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (89.98ms)
+Completed 200 OK in 106ms (Views: 86.1ms | ActiveRecord: 19.8ms | Allocations: 10898)
+
+
+Started GET "/clothes" for ::1 at 2020-07-29 16:31:52 -0400
+Started GET "/outfits" for ::1 at 2020-07-29 16:31:52 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OutfitsController#index as */*
+  [1m[35m (16.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (4.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (3.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.06ms)
+Completed 200 OK in 87ms (Views: 35.4ms | ActiveRecord: 46.8ms | Allocations: 21434)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (4.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (30.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (2.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (95.2ms)
+Completed 200 OK in 160ms (Views: 81.6ms | ActiveRecord: 66.7ms | Allocations: 31437)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:35:01 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:35:01 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (23.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (26.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.47ms)
+Completed 200 OK in 342ms (Views: 315.0ms | ActiveRecord: 26.9ms | Allocations: 5817)
+
+
+[active_model_serializers]   [1m[36mClothe Load (6.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (5.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (335.07ms)
+Completed 200 OK in 363ms (Views: 325.7ms | ActiveRecord: 37.0ms | Allocations: 10617)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:35:05 -0400
+Processing by OutfitsController#index as */*
+Started GET "/clothes" for ::1 at 2020-07-29 16:35:05 -0400
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (96.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (24.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (55.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (29.43ms)
+Completed 200 OK in 171ms (Views: 114.9ms | ActiveRecord: 55.5ms | Allocations: 5822)
+
+
+[active_model_serializers]   [1m[36mClothe Load (26.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (25.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (548.03ms)
+Completed 200 OK in 647ms (Views: 473.4ms | ActiveRecord: 173.4ms | Allocations: 11319)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:35:07 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:35:07 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (11.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (25.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  [1m[36mClothe Load (52.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.84ms)
+Completed 200 OK in 95ms (Views: 41.9ms | ActiveRecord: 52.9ms | Allocations: 8588)
+
+
+[active_model_serializers]   [1m[36mClothe Load (10.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (171.12ms)
+Completed 200 OK in 185ms (Views: 134.0ms | ActiveRecord: 50.8ms | Allocations: 10597)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:38:10 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:38:10 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (2.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (13.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (5.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.11ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 312ms (Views: 297.8ms | ActiveRecord: 13.8ms | Allocations: 5558)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (317.2ms)
+Completed 200 OK in 324ms (Views: 311.3ms | ActiveRecord: 11.8ms | Allocations: 10442)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:38:23 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:38:23 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (1.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (2.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.28ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 2.6ms | Allocations: 2765)
+
+
+[active_model_serializers]   [1m[36mClothe Load (13.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.78ms)
+Completed 200 OK in 49ms (Views: 31.6ms | ActiveRecord: 16.8ms | Allocations: 10914)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:41:20 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Started GET "/clothes" for ::1 at 2020-07-29 16:41:20 -0400
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (27.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (1.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.29ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.6ms | Allocations: 5002)
+
+
+[active_model_serializers]   [1m[36mClothe Load (79.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (4.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (138.93ms)
+Completed 200 OK in 144ms (Views: 29.0ms | ActiveRecord: 114.1ms | Allocations: 11319)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:41:31 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:41:31 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (1.0ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (1.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (6.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (11.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.55ms)
+Completed 200 OK in 427ms (Views: 415.6ms | ActiveRecord: 11.5ms | Allocations: 6833)
+
+
+[active_model_serializers]   [1m[36mClothe Load (6.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (438.27ms)
+Completed 200 OK in 444ms (Views: 428.0ms | ActiveRecord: 15.9ms | Allocations: 10918)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:42:08 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:42:08 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (2.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  [1m[36mOutfit Load (4.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.07ms)
+[active_model_serializers]   [1m[36mClothe Load (3.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 2.9ms | Allocations: 4516)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (2.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (196.04ms)
+Completed 200 OK in 208ms (Views: 197.2ms | ActiveRecord: 10.6ms | Allocations: 10906)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:42:09 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Started GET "/clothes" for ::1 at 2020-07-29 16:42:10 -0400
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+Processing by ClothesController#index as */*
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (1.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (2.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.04ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 1.5ms | Allocations: 5554)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (97.47ms)
+Completed 200 OK in 331ms (Views: 326.8ms | ActiveRecord: 4.1ms | Allocations: 11257)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:43:28 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:43:28 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (10.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (71.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.9ms)
+Completed 200 OK in 80ms (Views: 7.6ms | ActiveRecord: 71.7ms | Allocations: 4489)
+
+
+[active_model_serializers]   [1m[36mClothe Load (66.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1561.65ms)
+Completed 200 OK in 1708ms (Views: 1627.3ms | ActiveRecord: 80.7ms | Allocations: 10931)
+
+
+Started GET "/clothes" for ::1 at 2020-07-29 16:43:56 -0400
+Started GET "/outfits" for ::1 at 2020-07-29 16:43:56 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (1.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (17.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.29ms)
+Completed 200 OK in 23ms (Views: 5.5ms | ActiveRecord: 17.0ms | Allocations: 4962)
+
+
+[active_model_serializers]   [1m[36mClothe Load (15.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (12.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (242.92ms)
+Completed 200 OK in 249ms (Views: 215.4ms | ActiveRecord: 33.5ms | Allocations: 10452)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:44:29 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:44:29 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (14.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (11.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (19.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (16.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.59ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 292ms (Views: 272.8ms | ActiveRecord: 19.2ms | Allocations: 6726)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (329.87ms)
+Completed 200 OK in 348ms (Views: 303.8ms | ActiveRecord: 43.5ms | Allocations: 10914)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:45:43 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:45:43 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (13.2ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (13.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.49ms)
+[active_model_serializers]   [1m[36mClothe Load (13.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+Completed 200 OK in 23ms (Views: 9.1ms | ActiveRecord: 13.3ms | Allocations: 4515)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (113.61ms)
+Completed 200 OK in 130ms (Views: 100.5ms | ActiveRecord: 29.2ms | Allocations: 10915)
+
+
+Started GET "/clothes" for ::1 at 2020-07-29 16:46:47 -0400
+Started GET "/outfits" for ::1 at 2020-07-29 16:46:47 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mClothe Load (3.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  [1m[36mOutfit Load (1.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.05ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 3.9ms | Allocations: 4980)
+
+
+[active_model_serializers]   [1m[36mClothe Load (2.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1001.35ms)
+Completed 200 OK in 1006ms (Views: 995.0ms | ActiveRecord: 11.0ms | Allocations: 10498)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:47:12 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:47:12 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (40.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (41.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.74ms)
+Completed 200 OK in 340ms (Views: 298.8ms | ActiveRecord: 41.2ms | Allocations: 5793)
+
+
+[active_model_serializers]   [1m[36mClothe Load (0.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (307.65ms)
+Completed 200 OK in 352ms (Views: 307.6ms | ActiveRecord: 43.3ms | Allocations: 10906)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:47:28 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:47:28 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (13.1ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (7.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (2.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.86ms)
+Completed 200 OK in 133ms (Views: 124.8ms | ActiveRecord: 7.6ms | Allocations: 5804)
+
+
+[active_model_serializers]   [1m[36mClothe Load (26.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (932.22ms)
+Completed 200 OK in 949ms (Views: 906.2ms | ActiveRecord: 42.6ms | Allocations: 10927)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:50:37 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:50:37 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (1.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (4.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.09ms)
+Completed 200 OK in 421ms (Views: 416.2ms | ActiveRecord: 4.0ms | Allocations: 5792)
+
+
+[active_model_serializers]   [1m[36mClothe Load (31.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (14.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (4.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (512.68ms)
+Completed 200 OK in 518ms (Views: 463.6ms | ActiveRecord: 53.7ms | Allocations: 10577)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:54:16 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:54:16 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (2.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  [1m[36mClothe Load (17.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.48ms)
+Completed 200 OK in 770ms (Views: 752.2ms | ActiveRecord: 17.5ms | Allocations: 8721)
+
+
+[active_model_serializers]   [1m[36mClothe Load (5.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (772.04ms)
+Completed 200 OK in 775ms (Views: 765.4ms | ActiveRecord: 9.7ms | Allocations: 10446)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:54:22 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:54:22 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (70.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (111.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.93ms)
+Completed 200 OK in 119ms (Views: 7.3ms | ActiveRecord: 111.4ms | Allocations: 4490)
+
+
+[active_model_serializers]   [1m[36mClothe Load (44.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (2.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.02ms)
+Completed 200 OK in 180ms (Views: 60.2ms | ActiveRecord: 119.5ms | Allocations: 10578)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:54:58 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:54:58 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (10.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (6.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.18ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 6.5ms | Allocations: 4472)
+
+
+[active_model_serializers]   [1m[36mClothe Load (10.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (6.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (40.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (385.9ms)
+Completed 200 OK in 401ms (Views: 332.5ms | ActiveRecord: 68.1ms | Allocations: 10923)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:55:44 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:55:44 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (6.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (4.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (29.95ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 4.0ms | Allocations: 2768)
+
+
+[active_model_serializers]   [1m[36mClothe Load (50.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (674.34ms)
+Completed 200 OK in 683ms (Views: 625.1ms | ActiveRecord: 57.8ms | Allocations: 10931)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:55:49 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:55:49 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (12.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (14.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (1.85ms)
+Completed 200 OK in 622ms (Views: 607.7ms | ActiveRecord: 14.4ms | Allocations: 5927)
+
+
+[active_model_serializers]   [1m[36mClothe Load (0.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (131.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (13.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (760.01ms)
+Completed 200 OK in 775ms (Views: 615.7ms | ActiveRecord: 159.2ms | Allocations: 10443)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:56:40 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:56:40 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (1.0ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (3.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (1.97ms)
+Completed 200 OK in 339ms (Views: 335.9ms | ActiveRecord: 3.2ms | Allocations: 5822)
+
+
+[active_model_serializers]   [1m[36mClothe Load (4.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (69.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (527.54ms)
+Completed 200 OK in 531ms (Views: 452.8ms | ActiveRecord: 78.3ms | Allocations: 10577)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:57:14 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:57:14 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (61.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (65.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.18ms)
+Completed 200 OK in 73ms (Views: 6.7ms | ActiveRecord: 65.5ms | Allocations: 4489)
+
+
+[active_model_serializers]   [1m[36mClothe Load (29.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.34ms)
+Completed 200 OK in 107ms (Views: 15.3ms | ActiveRecord: 91.7ms | Allocations: 10577)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:58:07 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:58:07 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (3.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.49ms)
+  [1m[36mOutfit Load (12.9ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 3.9ms | Allocations: 2782)
+
+
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (12.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.67ms)
+Completed 200 OK in 55ms (Views: 27.2ms | ActiveRecord: 26.9ms | Allocations: 10581)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:58:08 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.6ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+Started GET "/clothes" for ::1 at 2020-07-29 16:58:08 -0400
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (3.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (4.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.11ms)
+[active_model_serializers]   [1m[36mClothe Load (2.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 4.2ms | Allocations: 5581)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.67ms)
+Completed 200 OK in 33ms (Views: 23.0ms | ActiveRecord: 10.1ms | Allocations: 11282)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:58:52 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:58:52 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (139.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  [1m[36mOutfit Load (140.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.91ms)
+Completed 200 OK in 153ms (Views: 13.1ms | ActiveRecord: 139.8ms | Allocations: 4489)
+
+
+[active_model_serializers]   [1m[36mClothe Load (10.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (9.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (725.93ms)
+Completed 200 OK in 981ms (Views: 819.7ms | ActiveRecord: 161.0ms | Allocations: 10590)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 16:58:54 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 16:58:54 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (4.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (12.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  [1m[36mClothe Load (22.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.21ms)
+Completed 200 OK in 483ms (Views: 460.5ms | ActiveRecord: 22.2ms | Allocations: 6859)
+
+
+[active_model_serializers]   [1m[36mClothe Load (81.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (569.53ms)
+Completed 200 OK in 1143ms (Views: 1040.2ms | ActiveRecord: 102.1ms | Allocations: 10927)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:00:56 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:00:56 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (3.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  [1m[36mClothe Load (7.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.87ms)
+Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 7.0ms | Allocations: 4625)
+
+
+[active_model_serializers]   [1m[36mClothe Load (9.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (456.98ms)
+Completed 200 OK in 472ms (Views: 457.3ms | ActiveRecord: 14.3ms | Allocations: 10451)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:02:29 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:02:29 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (9.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (14.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (0.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.64ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 1072ms (Views: 1057.0ms | ActiveRecord: 14.9ms | Allocations: 6870)
+
+
+[active_model_serializers]   [1m[36mClothe Load (42.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (103.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1211.81ms)
+Completed 200 OK in 1225ms (Views: 1068.0ms | ActiveRecord: 156.2ms | Allocations: 10447)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:02:44 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:02:44 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (68.3ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (70.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.91ms)
+[active_model_serializers]   [1m[36mClothe Load (5.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+Completed 200 OK in 77ms (Views: 6.1ms | ActiveRecord: 70.3ms | Allocations: 4515)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (136.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (11.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1419.48ms)
+Completed 200 OK in 1490ms (Views: 1264.0ms | ActiveRecord: 225.9ms | Allocations: 10930)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:03:14 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:03:14 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (1.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (9.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.04ms)
+Completed 200 OK in 17ms (Views: 7.5ms | ActiveRecord: 9.3ms | Allocations: 4624)
+
+
+[active_model_serializers]   [1m[36mClothe Load (12.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (4.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1364.04ms)
+Completed 200 OK in 1368ms (Views: 1349.0ms | ActiveRecord: 19.1ms | Allocations: 10455)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:03:25 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:03:25 -0400
+Processing by ClothesController#index as */*
+  [1m[36mClothe Load (51.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+Processing by OutfitsController#index as */*
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.6ms)
+Completed 200 OK in 60ms (Views: 8.5ms | ActiveRecord: 51.6ms | Allocations: 3237)
+
+
+  [1m[36mOutfit Load (51.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (6.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (404.87ms)
+Completed 200 OK in 461ms (Views: 400.4ms | ActiveRecord: 60.0ms | Allocations: 9732)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:03:26 -0400
+Processing by OutfitsController#index as */*
+Started GET "/clothes" for ::1 at 2020-07-29 17:03:26 -0400
+  [1m[36mOutfit Load (3.7ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (41.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+  [1m[36mClothe Load (1.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.43ms)
+[active_model_serializers]   [1m[36mClothe Load (6.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 1.8ms | Allocations: 4095)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (130.39ms)
+Completed 200 OK in 137ms (Views: 80.7ms | ActiveRecord: 55.8ms | Allocations: 11280)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:04:02 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:04:02 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (6.0ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (35.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (28.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.36ms)
+Completed 200 OK in 624ms (Views: 588.2ms | ActiveRecord: 35.8ms | Allocations: 5822)
+
+
+[active_model_serializers]   [1m[36mClothe Load (4.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (63.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (826.54ms)
+Completed 200 OK in 835ms (Views: 728.2ms | ActiveRecord: 106.1ms | Allocations: 10590)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:04:04 -0400
+Processing by OutfitsController#index as */*
+Started GET "/clothes" for ::1 at 2020-07-29 17:04:04 -0400
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (9.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (5.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.51ms)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 5.0ms | Allocations: 4489)
+
+
+[active_model_serializers]   [1m[36mClothe Load (15.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (47.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (23.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (417.85ms)
+Completed 200 OK in 430ms (Views: 333.7ms | ActiveRecord: 96.1ms | Allocations: 11288)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:05:06 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:05:06 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (25.2ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (130.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.32ms)
+[active_model_serializers]   [1m[36mClothe Load (106.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 137ms (Views: 6.8ms | ActiveRecord: 130.4ms | Allocations: 4650)
+
+
+[active_model_serializers]   [1m[36mClothe Load (11.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (778.05ms)
+Completed 200 OK in 807ms (Views: 663.7ms | ActiveRecord: 143.1ms | Allocations: 10452)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:05:19 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:05:19 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+Processing by ClothesController#index as */*
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (14.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   [1m[36mClothe Load (12.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.87ms)
+[active_model_serializers]   [1m[36mClothe Load (4.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+Completed 200 OK in 438ms (Views: 423.2ms | ActiveRecord: 14.9ms | Allocations: 5107)
+
+
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (3.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (30.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (482.31ms)
+Completed 200 OK in 486ms (Views: 435.0ms | ActiveRecord: 51.2ms | Allocations: 10917)
+
+
+Started GET "/clothes" for ::1 at 2020-07-29 17:05:47 -0400
+Started GET "/outfits" for ::1 at 2020-07-29 17:05:47 -0400
+Processing by ClothesController#index as */*
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (0.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (14.0ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (10.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (2.14ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 716ms (Views: 701.2ms | ActiveRecord: 14.0ms | Allocations: 7199)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.1ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (717.46ms)
+Completed 200 OK in 721ms (Views: 707.5ms | ActiveRecord: 13.0ms | Allocations: 10454)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:05:48 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:05:48 -0400
+Processing by OutfitsController#index as */*
+  [1m[36mOutfit Load (5.4ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+Processing by ClothesController#index as */*
+[active_model_serializers]   [1m[36mClothe Load (1.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (3.8ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (3.78ms)
+Completed 200 OK in 210ms (Views: 206.4ms | ActiveRecord: 3.8ms | Allocations: 5558)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.2ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (2.6ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (226.0ms)
+Completed 200 OK in 271ms (Views: 258.3ms | ActiveRecord: 12.0ms | Allocations: 10937)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:07:22 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:07:22 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (132.5ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+  [1m[36mClothe Load (205.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (4.92ms)
+Completed 200 OK in 215ms (Views: 9.4ms | ActiveRecord: 205.3ms | Allocations: 4489)
+
+
+[active_model_serializers]   [1m[36mClothe Load (84.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.4ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (268.92ms)
+Completed 200 OK in 410ms (Views: 191.0ms | ActiveRecord: 218.2ms | Allocations: 10578)
+
+
+Started GET "/outfits" for ::1 at 2020-07-29 17:07:29 -0400
+Started GET "/clothes" for ::1 at 2020-07-29 17:07:29 -0400
+Processing by OutfitsController#index as */*
+Processing by ClothesController#index as */*
+  [1m[36mOutfit Load (3.8ms)[0m  [1m[34mSELECT "outfits".* FROM "outfits"[0m
+  ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.9ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 1]]
+  [1m[36mClothe Load (91.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes"[0m
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+  ↳ app/controllers/clothes_controller.rb:5:in `index'
+No serializer found for resource: #<Clothe id: 1, name: "Brown & Red Striped T-Shirt", category: "Streetwear", size: "XS", image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:...", created_at: "2020-07-28 20:32:37", updated_at: "2020-07-28 20:32:37">
+[active_model_serializers]   [1m[36mClothe Load (10.7ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 2]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Clothe::ActiveRecord_Relation (5.22ms)
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+Completed 200 OK in 1286ms (Views: 1193.7ms | ActiveRecord: 91.5ms | Allocations: 6730)
+
+
+[active_model_serializers]   [1m[36mClothe Load (1.3ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 3]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mClothe Load (0.5ms)[0m  [1m[34mSELECT "clothes".* FROM "clothes" INNER JOIN "outfit_clothes" ON "clothes"."id" = "outfit_clothes"."clothe_id" WHERE "outfit_clothes"."outfit_id" = $1[0m  [["outfit_id", 4]]
+[active_model_serializers]   ↳ app/controllers/outfits_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1332.87ms)
+Completed 200 OK in 1343ms (Views: 1325.3ms | ActiveRecord: 17.1ms | Allocations: 10921)
+
+
