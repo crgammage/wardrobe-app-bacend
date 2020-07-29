@@ -1,4 +1,4 @@
 class ClothesSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :size, :category
+  attributes :name, :size, :category, :image
 end
