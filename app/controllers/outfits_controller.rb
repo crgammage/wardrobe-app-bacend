@@ -13,4 +13,9 @@ class OutfitsController < ApplicationController
         render json: OutfitSerializer.new(outfit, options)
     end
 
+    def delete
+        outfit = Outfit.find(params[:id])
+        outfit.destroy
+    end
+
 end
