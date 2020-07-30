@@ -7,7 +7,9 @@ class OutfitClothesController < ApplicationController
 
     def show
         outfit_clothe = OutfitClothe.find(params[:id])
-        render json: outfit_clothe, include: [:outfit, :clothe]
+        options = {
+        include: [:clothe, :outfit]}
+        render json: OutfitClotheSerializer.new(outfit_clothe, options)
     end
     
 end
