@@ -16,13 +16,11 @@ class ClothesController < ApplicationController
     end
 
     def create
-        byebug
         clothe = Clothe.create(clothe_params)
         render json: clothe, except: [:updated_at, :created_at]
     end
 
     def destroy
-        byebug
         clothe = Clothe.find(params[:id])
         clothe.destroy
     end
