@@ -23,6 +23,7 @@ class ClothesController < ApplicationController
     def destroy
         clothe = Clothe.find(params[:id])
         clothe.destroy
+        render json: clothe
     end
 
     private
